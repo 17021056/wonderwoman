@@ -8,9 +8,13 @@ void board();
 
 int main() {
 
-	int player = 1,i,choice;
+	int player = 1,i,choice,j;
 
-	char mark;
+	char mark,hoi,hoi1;
+	cout<<"ban muon bat dau chu ? <Y/N>"<<"\n";
+	cin>>hoi;
+	if(hoi=='Y' || hoi=='y'  )
+	while(1){
 	do {
 		board();
 		player=(player%2)?1:2;
@@ -61,16 +65,32 @@ int main() {
 	    while(i==-1);
 	    board();
 	    if(i==1){
-        system("cls");
+        cout<<"\n\n";
             system("color A");
         cout<<"Gameover !!\n";
-        cout<<"==>\aPlayer "<<--player<<" <<<win>>> ";
+        cout<<"==>\aPlayer "<<--player<<" <<<win>>> \n";
 	}
 	else
-		cout<<"==>\aCờ hòa !!";
-	cin.ignore();
-	cin.get();
-	return 0;
+		cout<<"==>\aCờ hòa !! \n";
+
+        cout<<"ban co muon tiep tuc ?<Y/N>";
+        cin>>hoi1;
+
+        if(hoi1=='Y' ||hoi1=='y')
+           {
+            square[1] = '1';
+            square[2] = '2';
+            square[3] = '3';
+            square[4] = '4';
+            square[5] = '5';
+            square[6] = '6';
+            square[7] = '7';
+            square[8] = '8';
+            square[9] = '9';
+           }
+           else
+            break;
+	}
 }
 int checkwin() {
 	if (square[1] == square[2] && square[2] == square[3])
@@ -107,10 +127,9 @@ int checkwin() {
 }
 
 void board(){
-	system("cls");
-	  system("color F");
+      system("cls");
+	  system("color A");
 	cout << "\n\n\tTic Tac Toe\n\n";
-
 	cout << "Player 1 (X)  -  Player 2 (O)" << endl << endl;
 	cout << endl;
 
