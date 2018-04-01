@@ -5,7 +5,19 @@ using namespace std;
 char square[10] = {'0','1','2','3','4','5','6','7','8','9'};
 int checkwin();
 void board();
-
+int vebanco(int m, int n){
+}
+void TextColor (int color)
+{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE) , color);
+}
+void gotoXY (int column, int line)
+{
+	COORD coord;
+	coord.X = column;
+	coord.Y = line;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coord);
+}
 int main() {
 
 	int player = 1,i,choice,j;
@@ -19,10 +31,11 @@ int main() {
 		board();
 		player=(player%2)?1:2;
 
+		cout<<"\n\n";
 		cout << "Player " << player << ", nhap so ma ban muon danh:  ";
 		cin >> choice;
+		TextColor(10);
 		mark=(player == 1) ? 'X' : 'O';
-
 		if (choice == 1 && square[1] == '1')
 
 			square[1] = mark;
@@ -66,12 +79,11 @@ int main() {
 	    board();
 	    if(i==1){
         cout<<"\n\n";
-            system("color A");
         cout<<"Gameover !!\n";
         cout<<"==>\aPlayer "<<--player<<" <<<win>>> \n";
 	}
 	else
-		cout<<"==>\aCờ hòa !! \n";
+		cout<<"==>\aCo hoa !! \n";
 
         cout<<"ban co muon tiep tuc ?<Y/N>";
         cin>>hoi1;
@@ -126,27 +138,18 @@ int checkwin() {
 		return -1;
 }
 
-void board(){
+void board() {
       system("cls");
-	  system("color A");
-	cout << "\n\n\tTic Tac Toe\n\n";
+            cout << "\n\ntic Tac Toe\n\n";
+
 	cout << "Player 1 (X)  -  Player 2 (O)" << endl << endl;
 	cout << endl;
+    cout <<char(218)<<char(196)<<char(196)<<char(196)<<char(196)<<char(194)<<char(196)<<char(196)<<char(196)<<char(196)<<char(194)<<char(196)<<char(196)<<char(196)<<char(196)<<char(191)<<endl;
+    cout <<char(179)<<"  "<<square[1]<<" "<<char(179)<<"  "<<square[2]<<" "<<char(179)<<"  "<<square[3]<<" "<<char(179)<<endl;
+    cout <<char(195)<<char(196)<<char(196)<<char(196)<<char(196)<<char(197)<<char(196)<<char(196)<<char(196)<<char(196)<<char(197)<<char(196)<<char(196)<<char(196)<<char(196)<<char(180)<<endl;
+    cout <<char(179)<<"  "<<square[4]<<" "<<char(179)<<"  "<<square[5]<<" "<<char(179)<<"  "<<square[6]<<" "<<char(179)<<endl;
+    cout <<char(195)<<char(196)<<char(196)<<char(196)<<char(196)<<char(197)<<char(196)<<char(196)<<char(196)<<char(196)<<char(197)<<char(196)<<char(196)<<char(196)<<char(196)<<char(180)<<endl;
+    cout <<char(179)<<"  "<<square[7]<<" "<<char(179)<<"  "<<square[8]<<" "<<char(179)<<"  "<<square[9]<<" "<<char(179)<<endl;
+    cout <<char(192)<<char(196)<<char(196)<<char(196)<<char(196)<<char(193)<<char(196)<<char(196)<<char(196)<<char(196)<<char(193)<<char(196)<<char(196)<<char(196)<<char(196)<<char(217)<<endl;
 
-	cout << "...... ..... ......" <<endl;
-    cout <<"|     |     |     | " << endl;
-	cout << "|  " << square[1] << "  |  " << square[2] << "  |  " << square[3] <<"  |"<< endl;
-
-	cout << "|_____|_____|_____|" << endl;
-	cout << "|     |     |     |" << endl;
-
-	cout << "|  " << square[4] << "  |  " << square[5] << "  |  " << square[6] <<"  |"<< endl;
-
-	cout << "|_____|_____|_____|" << endl;
-	cout << "|     |     |     |" << endl;
-
-	cout << "|  " << square[7] << "  |  " << square[8] << "  |  " << square[9]<<"  |" << endl;
-
-	cout << "|     |     |     |" << endl;
-    cout << " ----- ----- ----- "<<endl<<endl;
 }
