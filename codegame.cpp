@@ -1,16 +1,7 @@
 #include <iostream>
 #include<windows.h>
+#include"console.h"
 using namespace std;
-
-char square[10] = {'0','1','2','3','4','5','6','7','8','9'};
-int checkwin();
-void board();
-int vebanco(int m, int n){
-}
-void TextColor (int color)
-{
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE) , color);
-}
 void gotoXY (int column, int line)
 {
 	COORD coord;
@@ -18,10 +9,37 @@ void gotoXY (int column, int line)
 	coord.Y = line;
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coord);
 }
+
+void TextColor (int color)
+{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE) , color);
+}
+
+char square[10] = {'0','1','2','3','4','5','6','7','8','9'};
+int checkwin();
+void board();
 int main() {
 
-	int player = 1,i,choice,j;
-
+	int player = 1,choice;
+    int i,j;
+    for(j=1;j<=10;j++) {
+    system("cls");
+    TextColor(j);
+    gotoXY(0,2);
+    cout<<char(201);
+    for(i=1;i<50;i++)
+    cout<<char(205);
+    cout<<char(187)<<endl;
+    cout<<char(186)<<"             welcom to my game !!                "<<char(186)<<endl;
+    cout<<char(186)<<"                       Develop by Do Ngoc Thuyet "<<char(186)<<endl;
+    cout<<char(186)<<"                     To future..........!!       "<<char(186)<<endl;
+    cout<<char(186)<<"                                                 "<<char(186)<<endl;
+    cout<<char(186)<<"                                                 "<<char(186)<<endl;
+    cout<<char(200);
+    for(i=1;i<50;i++)
+    cout<<char(205);
+    cout<<char(188)<<endl;
+    Sleep(200);}
 	char mark,hoi,hoi1;
 	cout<<"ban muon bat dau chu ? <Y/N>"<<"\n";
 	cin>>hoi;
@@ -104,6 +122,7 @@ int main() {
             break;
 	}
 }
+
 int checkwin() {
 	if (square[1] == square[2] && square[2] == square[3])
 
