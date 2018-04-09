@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1514140574 source:e:\code nào anh em\gametictactoe\main.cpp
+	<iostream>
+
+1523234739 e:\code nào anh em\gametictactoe\console.h
+
+1523109727 e:\code nào anh em\gametictactoe\giaodiengame.h
+	<iostream>
+	<windows.h>
+
+1523108885 source:e:\code nào anh em\gametictactoe\console.cpp
+	<iostream>
+	<conio.h>
+	<windows.h>
+	"console.h"
+
+1523109373 source:e:\code nào anh em\gametictactoe\giaodiengame.cpp
+	"giaodiengame.h"
+
+1523109774 source:e:\code nào anh em\gametictactoe\ktrachienthang.cpp
+	"ktrachienthang.h"
+
+1523234374 e:\code nào anh em\gametictactoe\ktrachienthang.h
+
