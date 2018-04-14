@@ -1,8 +1,0 @@
-#ifndef KTRACHIENTHANG_H_INCLUDED
-#define KTRACHIENTHANG_H_INCLUDED
-
-int checkwin();
-
-
-#endif // KTRACHIENTHANG_H_INCLUDED
-
