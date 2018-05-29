@@ -1,4 +1,6 @@
-Game Cờ caro 
+Game Cờ caro.
+
+
 Bài tập lớn
 Họ và tên : ĐỖ Ngọc Thuyết
 Thời gian hoàn thành : 2 tuần.
